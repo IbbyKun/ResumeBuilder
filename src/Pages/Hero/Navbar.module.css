@@ -1,0 +1,82 @@
+/* Navbar.module.css */
+
+.navbar {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+.navbarContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.navbarContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.navbarLogo {
+  margin-left: 48px;
+}
+
+.logo {
+  max-width: 100px;
+  max-height: 55px;
+}
+
+.navbarItems {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.navbarLink {
+  padding: 20px 12px;
+  color: #4a5568;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbarLink:hover {
+  color: #2d3748;
+}
+
+.active {
+  border-bottom: 2px solid #4299e1;
+}
+
+.navbarSecondaryItems {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.signupButton {
+  padding: 8px 12px;
+  background-color: #4299e1;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.signupButton:hover {
+  background-color: #3182ce;
+}
+
+.loginLink {
+  padding: 8px 12px;
+  color: #4299e1;
+  text-decoration: none;
+}
+
+.loginLink:hover {
+  color: #3182ce;
+}

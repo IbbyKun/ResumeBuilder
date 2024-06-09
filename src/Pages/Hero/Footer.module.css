@@ -1,0 +1,88 @@
+/* Footer.css */
+
+.footer {
+  background-color: #374151;
+  color: #d1d5db;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logo {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.company-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.company-description {
+  font-size: 0.875rem;
+}
+
+.footer-categories {
+  display: flex;
+  gap: 20px;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.category-title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.category-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.category-link {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.category-link:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-link {
+  color: #d1d5db;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  text-decoration: underline;
+}
