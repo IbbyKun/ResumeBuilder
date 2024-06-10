@@ -21,7 +21,7 @@ export default function Navbar() {
     <>
       <Box id="navbar" bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <ReachLink to="/">
+          <ReachLink to="/home">
             <Box>
               <img
                 style={{ height: '44px' }}
@@ -57,6 +57,16 @@ export default function Navbar() {
                 {' '}
                 Extraction{' '}
               </ReachLink>
+              <ReachLink
+                px={2}
+                py={1}
+                rounded={'md'}
+                _hover={{ textDecoration: 'none', bg: 'gray.200' }}
+                to={'/evaluation'}
+              >
+                {' '}
+                Evaluation{' '}
+              </ReachLink>
             </HStack>
           </HStack>
 
@@ -90,6 +100,16 @@ export default function Navbar() {
               >
                 {' '}
                 Extraction{' '}
+              </ReachLink>
+              <ReachLink
+                px={2}
+                py={1}
+                rounded={'md'}
+                _hover={{ textDecoration: 'none', bg: 'gray.200' }}
+                to={'/evaluation'}
+              >
+                {' '}
+                Evaluation{' '}
               </ReachLink>
             </Stack>
           </Box>

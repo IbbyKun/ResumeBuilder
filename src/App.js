@@ -12,6 +12,7 @@ import Signup from './Pages/LoginSignUp/signup';
 import Steps from './Pages/Steps/steps';
 import Testemonials from './Pages/Testemonials/testemonials';
 import Footer from './Components/Footer/Footer';
+import Evaluation from './Pages/Evaluation/evaluation'
 
 function App() {
   return (
@@ -68,6 +69,16 @@ function App() {
               <>
                 <Navbar />
                 <Extraction />
+              </>
+            }
+          />
+          <Route
+            exact
+            path="/evaluation"
+            element={
+              <>
+                <Navbar />
+                <Evaluation />
               </>
             }
           />

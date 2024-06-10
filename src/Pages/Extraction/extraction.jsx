@@ -1,47 +1,87 @@
 import React, { useState } from 'react';
 
-const PdfToTable = () => {
-  const [pdfText, setPdfText] = useState('');
-  const [tableData, setTableData] = useState([]);
+const containerStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  padding: '20px',
+};
 
-  // Function to handle paste event
-  const handlePaste = (event) => {
-    event.preventDefault();
-    const pasteData = event.clipboardData.getData('Text');
-    setPdfText(pasteData);
+const buttonStyle = {
+  marginTop: '20px',
+  padding: '10px 20px',
+  backgroundColor: '#38B2AC',
+  color: 'white',
+  border: 'none',
+  cursor: 'pointer',
+  borderRadius: '5px',
+};
 
-    // Convert pasteData to tableData (example)
-    const lines = pasteData.split('\n').map(line => line.trim());
-    const data = lines.map(line => line.split('\t'));
-    setTableData(data);
+const tableStyle = {
+  marginTop: '20px',
+  borderCollapse: 'collapse',
+  width: '80%',
+};
+
+const thStyle = {
+  border: '1px solid #ddd',
+  padding: '8px',
+  backgroundColor: '#f2f2f2',
+};
+
+const tdStyle = {
+  border: '1px solid #ddd',
+  padding: '8px',
+};
+
+const UploadPDF = () => {
+  const [file, setFile] = useState(null);
+  const [showTable, setShowTable] = useState(false);
+
+  const handleFileChange = (event) => {
+    setFile(event.target.files[0]);
+    setShowTable(false); // Reset table visibility on new file upload
+  };
+
+  const handleButtonClick = () => {
+    if (file) {
+      setShowTable(true);
+    } else {
+      alert('Please upload a PDF file first.');
+    }
   };
 
   return (
-    <div style={{ padding: '20px', textAlign: 'center' }}>
-      <h1>Paste your PDF content here:</h1>
-      <textarea
-        style={{ width: '100%', height: '200px', border: '1px solid #38B2AC', marginTop: '10px' }}
-        onPaste={handlePaste}
-      ></textarea>
-
-      <h2 style={{ marginTop: '20px' }}>Table:</h2>
-      <div style={{ overflowX: 'auto', marginTop: '10px' }}>
-        <table style={{ borderCollapse: 'collapse', width: '100%' }}>
+    <div style={containerStyle}>
+      <input type="file" accept="application/pdf" onChange={handleFileChange} />
+      <button style={buttonStyle} onClick={handleButtonClick}>
+        Show Table
+      </button>
+      {showTable && (
+        <table style={tableStyle}>
+          <thead>
+            <tr>
+              <th style={thStyle}>Header 1</th>
+              <th style={thStyle}>Header 2</th>
+              <th style={thStyle}>Header 3</th>
+            </tr>
+          </thead>
           <tbody>
-            {tableData.map((row, rowIndex) => (
-              <tr key={rowIndex}>
-                {row.map((cell, cellIndex) => (
-                  <td key={`${rowIndex}-${cellIndex}`} style={{ border: '1px solid #38B2AC', padding: '5px' }}>
-                    {cell}
-                  </td>
-                ))}
-              </tr>
-            ))}
+            <tr>
+              <td style={tdStyle}>Data 1</td>
+              <td style={tdStyle}>Data 2</td>
+              <td style={tdStyle}>Data 3</td>
+            </tr>
+            <tr>
+              <td style={tdStyle}>Data 4</td>
+              <td style={tdStyle}>Data 5</td>
+              <td style={tdStyle}>Data 6</td>
+            </tr>
           </tbody>
         </table>
-      </div>
+      )}
     </div>
   );
 };
 
-export default PdfToTable;
+export default UploadPDF;
