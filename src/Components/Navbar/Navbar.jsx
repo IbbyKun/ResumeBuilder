@@ -18,8 +18,12 @@ export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <>
-      <Box id="navbar" bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
+    <div
+      style={{
+        background: '#3E1F47',
+      }}
+    >
+      <Box id="navbar" px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <ReachLink to="/home">
             <Box>
@@ -44,6 +48,7 @@ export default function Navbar() {
                 rounded={'md'}
                 _hover={{ textDecoration: 'none', bg: 'gray.200' }}
                 to={'/home'}
+                style={{ color: 'white' }}
               >
                 Home{' '}
               </ReachLink>
@@ -53,6 +58,7 @@ export default function Navbar() {
                 rounded={'md'}
                 _hover={{ textDecoration: 'none', bg: 'gray.200' }}
                 to={'/about'}
+                style={{ color: 'white' }}
               >
                 {' '}
                 Extraction{' '}
@@ -63,6 +69,7 @@ export default function Navbar() {
                 rounded={'md'}
                 _hover={{ textDecoration: 'none', bg: 'gray.200' }}
                 to={'/evaluation'}
+                style={{ color: 'white' }}
               >
                 {' '}
                 Evaluation{' '}
@@ -78,43 +85,7 @@ export default function Navbar() {
             onClick={isOpen ? onClose : onOpen}
           />
         </Flex>
-
-        {isOpen ? (
-          <Box pb={4} display={{ md: 'none' }}>
-            <Stack as={'nav'} spacing={4}>
-              <ReachLink
-                px={2}
-                py={1}
-                rounded={'md'}
-                _hover={{ textDecoration: 'none', bg: 'gray.200' }}
-                to={'/home'}
-              >
-                Home{' '}
-              </ReachLink>
-              <ReachLink
-                px={2}
-                py={1}
-                rounded={'md'}
-                _hover={{ textDecoration: 'none', bg: 'gray.200' }}
-                to={'/about'}
-              >
-                {' '}
-                Extraction{' '}
-              </ReachLink>
-              <ReachLink
-                px={2}
-                py={1}
-                rounded={'md'}
-                _hover={{ textDecoration: 'none', bg: 'gray.200' }}
-                to={'/evaluation'}
-              >
-                {' '}
-                Evaluation{' '}
-              </ReachLink>
-            </Stack>
-          </Box>
-        ) : null}
       </Box>
-    </>
+    </div>
   );
 }

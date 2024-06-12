@@ -1,24 +1,25 @@
-import { Flex, Container, Heading, Stack, Text, Button, Box } from '@chakra-ui/react';
-import './introduction.css';
-import homeLogo from './../../Assets/home-logo.png'
-import { Image } from '@chakra-ui/react'
+import { Flex, Container, Heading, Stack, Text, Button, Box, Image } from '@chakra-ui/react';
 import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import ResumeContext from '../../Context/ResumeContext';
 import ThemeTemplateData from '../../db/ThemeTemplateData';
-import { Helmet } from 'react-helmet';
+import './introduction.css';
+import homeLogo from './../../Assets/home-logo.png';
 
 export default function Introduction() {
     const { selectBtn, setSelectBtn, setCurrentTheme, showComponent, setShowComponent } = useContext(ResumeContext);
+    const navigate = useNavigate();
 
     const handleSelectTemplate = () => {
-        setSelectBtn(!selectBtn)
-    }
+        setSelectBtn(!selectBtn);
+        navigate('/template'); // Navigate to /template
+    };
 
     const showTheme = (e) => {
-        setShowComponent(!showComponent)
-        setCurrentTheme(e.target.id)
-    }
-
+        setShowComponent(!showComponent);
+        setCurrentTheme(e.target.id);
+    };
 
     return (
         <>
@@ -127,6 +128,5 @@ export default function Introduction() {
                 }
             </Container>
         </>
-
     );
 }

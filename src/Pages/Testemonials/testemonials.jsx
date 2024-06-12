@@ -6,7 +6,6 @@ const containerStyle = {
   flexDirection: 'column',
   alignItems: 'center',
   padding: '20px',
-  backgroundColor: 'white',
 };
 
 const headingStyle = {

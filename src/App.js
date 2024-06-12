@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import './App.css';
 import ResumeState from './Context/ResumeState';
 import { Routes, Route } from 'react-router-dom';
-import Home from './Pages/Home/Home';
+import Template from './Pages/Home/Home';
 import Navbar from './Components/Navbar/Navbar';
 import About from './Pages/About/About';
 import Extraction from './Pages/Extraction/extraction';
@@ -13,6 +13,7 @@ import Steps from './Pages/Steps/steps';
 import Testemonials from './Pages/Testemonials/testemonials';
 import Footer from './Components/Footer/Footer';
 import Evaluation from './Pages/Evaluation/evaluation'
+import Main from './MainPage'
 
 function App() {
   return (
@@ -54,10 +55,7 @@ function App() {
             element={
               <>
                 <Navbar />
-                <Home />
-                <Steps />
-                <Testemonials />
-                <About />
+                <Main/>
                 <Footer />
               </>
             }
@@ -69,6 +67,16 @@ function App() {
               <>
                 <Navbar />
                 <Extraction />
+              </>
+            }
+          />
+          <Route
+            exact
+            path="/template"
+            element={
+              <>
+                <Navbar />
+                <Template />
               </>
             }
           />

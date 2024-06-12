@@ -29,7 +29,7 @@ const SocialButton = ({ children, label, href }) => {
 export default function Footer() {
     return (
         <Box
-            bg={useColorModeValue('gray.50', 'gray.900')}
+            bg={'#9B79C6'}
             color={useColorModeValue('gray.700', 'gray.200')}>
             <Container
                 textAlign={'center'}

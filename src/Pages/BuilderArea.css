@@ -8,6 +8,7 @@
 #theme-box-border {
     height: fit-content;
     min-width: 50%;
+    background-color: white;
 }
 
 #spinner {

@@ -26,11 +26,12 @@ const boldText = {
 
 const regularText = {
   marginTop: '5px',
+  color: 'white',
 };
 
 export default function Steps() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px', backgroundColor: 'white' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px' }}>
       <div style={{ fontSize: '32px', fontWeight: 'bold', color: 'black', marginBottom: '20px', textAlign: 'center' }}>Steps</div>
       <br></br>
       <br></br>

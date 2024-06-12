@@ -119,7 +119,7 @@ export default function About() {
                         fontSize={48}
                         fontFamily={'Work Sans'}
                         fontWeight={'bold'}
-                        color={useColorModeValue('gray.700', 'gray.50')}>
+                        color={'white'}>
                         Resume Builder
                     </chakra.h1>
                     <chakra.h2
