@@ -1,0 +1,12 @@
+Streamlit
+pandas
+nltk
+scikit-learn
+express
+multer
+pdf-parse
+xlsx
+axios
+natural
+child_process
+body-parser

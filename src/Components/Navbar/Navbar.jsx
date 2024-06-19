@@ -57,6 +57,16 @@ export default function Navbar() {
                 py={1}
                 rounded={'md'}
                 _hover={{ textDecoration: 'none', bg: 'gray.200' }}
+                to={'/home'}
+                style={{ color: 'white' }}
+              >
+                Parser{' '}
+              </ReachLink>
+              <ReachLink
+                px={2}
+                py={1}
+                rounded={'md'}
+                _hover={{ textDecoration: 'none', bg: 'gray.200' }}
                 to={'/about'}
                 style={{ color: 'white' }}
               >
