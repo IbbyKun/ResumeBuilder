@@ -57,7 +57,7 @@ export default function Navbar() {
                 py={1}
                 rounded={'md'}
                 _hover={{ textDecoration: 'none', bg: 'gray.200' }}
-                to={'/home'}
+                to={'/parser'}
                 style={{ color: 'white' }}
               >
                 Parser{' '}

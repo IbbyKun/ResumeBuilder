@@ -238,6 +238,8 @@ app.post(
 
       const top10Rows = getTop10RowsBySimilarityScore(newFilePath);
 
+      console.log('Top 10 Rows:', top10Rows); // Add this line to log top 10 rows
+
       fs.unlinkSync(filePath);
 
       res.json({

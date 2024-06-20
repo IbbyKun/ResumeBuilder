@@ -12,8 +12,9 @@ import Signup from './Pages/LoginSignUp/signup';
 import Steps from './Pages/Steps/steps';
 import Testemonials from './Pages/Testemonials/testemonials';
 import Footer from './Components/Footer/Footer';
-import Evaluation from './Pages/Model/NewRanking'
-import Main from './MainPage'
+import Evaluation from './Pages/Model/NewRanking';
+import Parser from './Pages/Parser/resumeparser';
+import Main from './MainPage';
 
 function App() {
   return (
@@ -55,7 +56,18 @@ function App() {
             element={
               <>
                 <Navbar />
-                <Main/>
+                <Main />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            exact
+            path="/parser"
+            element={
+              <>
+                <Navbar />
+                <Parser />
                 <Footer />
               </>
             }

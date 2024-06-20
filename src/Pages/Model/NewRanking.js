@@ -29,11 +29,15 @@ const PdfJobMatcher = () => {
     formData.append('excelFile', excelFile);
 
     try {
-      const response = await fetch('http://localhost:8000/process-job-matching', {
-        method: 'POST',
-        body: formData,
-      });
+      const response = await fetch(
+        'http://localhost:8000/process-job-matching',
+        {
+          method: 'POST',
+          body: formData,
+        }
+      );
       const data = await response.json();
+      console.log('Received data:', data); // Log the received data
       setResult(generateTable(data.top10Rows));
     } catch (error) {
       console.error('Error:', error);
@@ -45,6 +49,8 @@ const PdfJobMatcher = () => {
     if (!data || data.length === 0) {
       return 'No results to display.';
     }
+
+    console.log('Data for table:', data); // Log the data for the table
 
     const rows = data.map((item, index) => (
       <tr key={index}>
