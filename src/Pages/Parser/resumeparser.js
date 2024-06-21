@@ -15,7 +15,7 @@ const PDFUpload = () => {
     const fileInput = document.getElementById('resume');
     formData.append('resume', fileInput.files[0]);
 
-    const response = await fetch('http://localhost:3001/upload', {
+    const response = await fetch('http://localhost:8000/upload', {
       method: 'POST',
       body: formData,
     });
