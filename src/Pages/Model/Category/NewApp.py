@@ -1,15 +1,46 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+import pickle
 import re
-from pdfminer.high_level import extract_text
+import nltk
 import spacy
+import logging
+from pdfminer.high_level import extract_text
+
+nltk.download("punkt")
+nltk.download("stopwords")
 
 # Load spaCy model
 nlp = spacy.load('en_core_web_sm')
 
-app = Flask(__name__)
-CORS(app)
+def load_models():
+    try:
+        with open("knn_model.pkl", "rb") as model_file:
+            clf = pickle.load(model_file)
+        with open("tfidf_vectorizer.pkl", "rb") as vectorizer_file:
+            tfidf = pickle.load(vectorizer_file)
+        print("Models loaded successfully.")
+        return clf, tfidf
+    except FileNotFoundError as e:
+        print(f"File not found: {e}")
+    except IOError as e:
+        print(f"IO error: {e}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
+clf, tfidf = load_models()
+
+def clean_resume(resume_text):
+    clean_text = re.sub("http\S+\s*", " ", resume_text)
+    clean_text = re.sub("RT|cc", " ", clean_text)
+    clean_text = re.sub("#\S+", "", clean_text)
+    clean_text = re.sub("@\S+", "  ", clean_text)
+    clean_text = re.sub(
+        "[%s]" % re.escape("""!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"""), " ", clean_text
+    )
+    clean_text = re.sub(r"[^\x00-\x7f]", r" ", clean_text)
+    clean_text = re.sub("\s+", " ", clean_text)
+    return clean_text
 
 def extract_information(text):
     personal_info = extract_personal_info(text)
@@ -19,7 +50,6 @@ def extract_information(text):
 
 def extract_personal_info(text):
     personal_info = {}
-    # Use regex to extract email, phone number, and names
     email_pattern = r'[\w\.-]+@[\w\.-]+'
     phone_pattern = r'\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}'
     email_match = re.search(email_pattern, text)
@@ -30,11 +60,10 @@ def extract_personal_info(text):
     if phone_match:
         personal_info['phone'] = phone_match.group(0)
 
-    # Use spaCy to extract names (Assuming the name is a proper noun at the beginning of the document)
     doc = nlp(text)
     names = [ent.text for ent in doc.ents if ent.label_ == 'PERSON']
     if names:
-        personal_info['name'] = names[0]  # Taking the first detected name
+        personal_info['name'] = names[0]
 
     return personal_info
 
@@ -47,7 +76,6 @@ def extract_experiences(text):
     return experiences
 
 def extract_skills(text):
-    # A simple approach to identify skills (this can be improved)
     skills = []
     skill_keywords = [
     # Software Engineering
@@ -135,25 +163,80 @@ def extract_skills(text):
     'Project Management', 'Technical Documentation', 'Technical Support', 'R&D', 'Research and Development'
 ]
 
-    
+   
     for keyword in skill_keywords:
         if keyword.lower() in text.lower():
             skills.append(keyword)
     return skills
 
+app = Flask(__name__)
+CORS(app)
+
+@app.route("/predict", methods=["POST"])
+def predict():
+    try:
+        data = request.get_json()
+        pdf_content = data["pdf_content"]
+        logging.info(f"Received PDF content: {pdf_content[:500]}...")
+
+        cleaned_resume = clean_resume(pdf_content)
+        input_features = tfidf.transform([cleaned_resume])
+        prediction_id = clf.predict(input_features)[0]
+
+        category_mapping = {
+            15: "Java Developer",
+            23: "Testing",
+            8: "DevOps Engineer",
+            20: "Python Developer",
+            24: "Web Designing",
+            12: "HR",
+            13: "Hadoop",
+            3: "Blockchain",
+            10: "ETL Developer",
+            18: "Operations Manager",
+            6: "Data Science",
+            22: "Sales",
+            16: "Mechanical Engineer",
+            1: "Arts",
+            7: "Database",
+            11: "Electrical Engineering",
+            14: "Health and Fitness",
+            19: "PMO",
+            4: "Business Analyst",
+            9: "DotNet Developer",
+            2: "Automation Testing",
+            17: "Network Security Engineer",
+            21: "SAP Developer",
+            5: "Civil Engineer",
+            0: "Advocate",
+        }
+
+        category_name = category_mapping.get(prediction_id, "Unknown")
+        logging.info(f"Predicted category: {category_name}")
+
+        return jsonify({"category": category_name})
+    except Exception as e:
+        logging.error(f"Error during prediction: {e}")
+        return jsonify({"error": str(e)}), 500
+
 @app.route('/extract', methods=['POST'])
 def extract():
-    data = request.get_json()
-    text = data.get('text', '')
-    if text:
-        personal_info, experiences, skills = extract_information(text)
-        return jsonify({
-            'personal_info': personal_info,
-            'experiences': experiences,
-            'skills': skills
-        })
-    else:
-        return jsonify({'error': 'No text provided'}), 400
+    try:
+        data = request.get_json()
+        text = data.get('text', '')
+        if text:
+            personal_info, experiences, skills = extract_information(text)
+            return jsonify({
+                'personal_info': personal_info,
+                'experiences': experiences,
+                'skills': skills
+            })
+        else:
+            return jsonify({'error': 'No text provided'}), 400
+    except Exception as e:
+        logging.error(f"Error during extraction: {e}")
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
     app.run(debug=True)

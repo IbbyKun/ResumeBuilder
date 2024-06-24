@@ -29,10 +29,19 @@ const PDFUpload = () => {
     });
   };
 
+  const handleClear = () => {
+    setParsedData({
+      name: '',
+      email: '',
+      phone: '',
+      skills: [],
+    });
+  };
+
   return (
     <div>
       <h1>Upload Resume PDF</h1>
-      <form id="pdfForm" onSubmit={handleSubmit} enctype="multipart/form-data">
+      <form id="pdfForm" onSubmit={handleSubmit} encType="multipart/form-data">
         <input
           type="file"
           id="resume"
@@ -55,10 +64,11 @@ const PDFUpload = () => {
           <strong>Phone No:</strong> <span id="phone">{parsedData.phone}</span>
         </p>
         <p>
-          <strong>Skills:</strong>{' '}
-          <span id="skills">{parsedData.skills.join(', ')}</span>
+          <strong>Skills:</strong> <span id="skills">{parsedData.skills.join(', ')}</span>
         </p>
       </div>
+      
+      <button onClick={handleClear}>Clear</button>
     </div>
   );
 };
