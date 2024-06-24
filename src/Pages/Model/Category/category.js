@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const PdfDirectoryCategory = () => {
-  const [category, setCategory] = useState('Processing...');
+  const [categoryCounts, setCategoryCounts] = useState({});
 
   const processPDFs = () => {
     const pdfDirectory = document.getElementById('pdf-directory').value;
@@ -14,7 +14,7 @@ const PdfDirectoryCategory = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        setCategory(data.category);
+        setCategoryCounts(data.categoryCounts);
       })
       .catch((error) => {
         console.error('Error:', error);
@@ -44,10 +44,20 @@ const PdfDirectoryCategory = () => {
             />
           </div>
           <div style={styles.formGroup}>
-            <label style={styles.label}>Category:</label>
-            <span id="category" style={styles.category}>
-              {category}
-            </span>
+            <label style={styles.label}>Category Counts:</label>
+            <div id="category" style={styles.category}>
+              {Object.keys(categoryCounts).length === 0 ? (
+                <span>Processing...</span>
+              ) : (
+                <ul>
+                  {Object.entries(categoryCounts).map(([category, count]) => (
+                    <li key={category}>
+                      {category}: {count}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           </div>
           <button type="button" onClick={processPDFs} style={styles.button}>
             Submit

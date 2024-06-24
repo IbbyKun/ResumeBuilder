@@ -49,22 +49,22 @@ const PdfJobMatcher = () => {
     if (!data || data.length === 0) {
       return 'No results to display.';
     }
-
-    console.log('Data for table:', data); // Log the data for the table
-
+  
     const rows = data.map((item, index) => (
-      <tr key={index}>
-        <td>{item.field1}</td>
-        <td>{item.field2}</td>
+      <tr key={index} >
+        <td>{item[0]}</td>
+        <td style={styles.tableRow}>{item[1]}</td>
+        <td>{item[2]}</td>
       </tr>
     ));
-
+  
     return (
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           <tr>
             <th style={styles.tableHeader}>Field 1</th>
             <th style={styles.tableHeader}>Field 2</th>
+            <th style={styles.tableHeader}>Field 3</th>
           </tr>
         </thead>
         <tbody>{rows}</tbody>
@@ -157,6 +157,7 @@ const styles = {
     fontSize: '16px',
     border: '1px solid #ccc',
     borderRadius: '4px',
+    
     backgroundColor: '#fff',
     boxSizing: 'border-box',
   },
@@ -193,6 +194,11 @@ const styles = {
     padding: '10px',
     textAlign: 'left',
     backgroundColor: '#f2f2f2',
+  },
+  tableRow: {
+    maxHeight: '100px',
+    overflowY: 'auto',
+    display: 'block',
   },
 };
 

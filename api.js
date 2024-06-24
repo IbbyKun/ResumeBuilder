@@ -35,9 +35,9 @@ app.use(express.json());
 app.post('/process-pdf', async (req, res) => {
   const pdfDirectory = req.body.pdfDirectory;
   console.log(`Received PDF directory path: ${pdfDirectory}`);
-  await processPDFs(pdfDirectory);
-  const category = 'Sample Category';
-  res.json({ category: category });
+  const categoryCount = await processPDFs(pdfDirectory);
+  console.log(categoryCount);
+  res.json({ categoryCounts: categoryCount });
 });
 
 async function predictCategory(text) {
@@ -106,6 +106,16 @@ async function processPDFs(directoryPath) {
     'others',
   ];
 
+  // Initialize count object for categories
+  const categoryCounts = {
+    'Business Analyst': 0,
+    'Data Science': 0,
+    'Advocate': 0,
+    'Electrical Engineer': 0,
+    'HR': 0,
+    'others': 0,
+  };
+
   try {
     const pdfData = await readPDFFiles(directoryPath);
 
@@ -120,10 +130,12 @@ async function processPDFs(directoryPath) {
       if (categories.includes(category)) {
         pdfData[i].category = category;
         pdfDataByCategory[category].push(pdfData[i]);
+        categoryCounts[category]++;
       } else {
         const categ = 'others';
         pdfData[i].category = categ;
         pdfDataByCategory[categ].push(pdfData[i]);
+        categoryCounts[categ]++;
       }
     }
 
@@ -132,6 +144,7 @@ async function processPDFs(directoryPath) {
   } catch (error) {
     console.error('Error:', error);
   }
+  return categoryCounts;
 }
 
 // User authentication routes
@@ -210,19 +223,17 @@ function generateExcel(pdfData, outputPath) {
 }
 
 // Endpoint for processing job matching with Excel file
-app.post(
-  '/process-job-matching',
-  upload.single('excelFile'),
+app.post('/process-job-matching', upload.single('excelFile'),
   async (req, res) => {
-    const description = req.body.jobDescription;
-    const filePath = req.file.path;
-    const workbook = XLSX.readFile(filePath);
-    const sheetName = workbook.SheetNames[0];
-    const sheet = workbook.Sheets[sheetName];
-    const data = XLSX.utils.sheet_to_json(sheet, { header: 1 });
-    console.log(`Received job description: ${description}`);
-
     try {
+      const description = req.body.jobDescription;
+      const filePath = req.file.path;
+      const workbook = XLSX.readFile(filePath);
+      const sheetName = workbook.SheetNames[0];
+      const sheet = workbook.Sheets[sheetName];
+      const data = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+      console.log(`Received job description: ${description}`);
+
       data[0].push('Similarity Score');
       const resumeTextIndex = 1;
       for (let i = 1; i < data.length; i++) {
@@ -326,6 +337,7 @@ app.get('/parser', (req, res) => {
 
 // Function to extract information from text
 async function extractInformation(resumeText) {
+  console.log("Making Call B\n");
   const response = await fetch('http://127.0.0.1:5000/extract', {
     method: 'POST',
     headers: {
