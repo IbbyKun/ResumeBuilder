@@ -7,14 +7,16 @@ import Template from './Pages/Home/Home';
 import Navbar from './Components/Navbar/Navbar';
 import About from './Pages/About/About';
 import Extraction from './Pages/Model/Category/category';
-import Login from './Pages/LoginSignUp/login';
-import Signup from './Pages/LoginSignUp/signup';
+import Login from './Views/Signin';
+import Signup from './Views/SignUp';
 import Steps from './Pages/Steps/steps';
 import Testemonials from './Pages/Testemonials/testemonials';
 import Footer from './Components/Footer/Footer';
 import Evaluation from './Pages/Model/NewRanking';
 import Parser from './Pages/Parser/resumeparser';
-import Main from './MainPage';
+import Main from './Views/LandingPage';
+import Home from './MainPage'
+import Page2 from './Views/BuilderAndParser';
 
 function App() {
   return (
@@ -48,16 +50,26 @@ function App() {
         </Helmet>
 
         <Routes>
-          <Route exact path="/" element={<Login />} />
+          <Route exact path="/login" element={<Login />} />
           <Route exact path="/signup" element={<Signup />} />
+          <Route exact path="/page2" element={<Page2 />} />
           <Route
             exact
             path="/home"
             element={
               <>
                 <Navbar />
-                <Main />
+                <Home />
                 <Footer />
+              </>
+            }
+          />
+          <Route
+            exact
+            path="/"
+            element={
+              <>
+                <Main />
               </>
             }
           />

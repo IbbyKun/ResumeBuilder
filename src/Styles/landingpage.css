@@ -1,0 +1,592 @@
+.frame-1 .mission {
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFFFF;
+  }
+  .frame-1 .about-us {
+    margin-right: 11.5px;
+    width: 93.9px;
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFFFF;
+  }
+  .frame-1 .thousands-of-creative-stock-images-download-graphic-design-images-from-our-creative-store-removebg-preview-1 {
+    background: url('assets/images/ThousandsOfCreativeStockImagesDownloadGraphicDesignImagesFromOurCreativeStoreRemovebgPreview1.png') 50% / cover no-repeat;
+    width: 466px;
+    height: 454px;
+  }
+  .frame-1 .the-ideal-framework-to-learn-how-to-parse-and-build-resumes {
+    position: relative;
+    margin-bottom: 53px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 400;
+    font-size: 25px;
+    color: #EEEEEE;
+  }
+  .frame-1 .your-next-big-idea-starts-here {
+    position: absolute;
+    left: 0px;
+    top: 56px;
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 700;
+    font-size: 65px;
+    color: #FFFFFF;
+  }
+  .frame-1 .thousands-of-creative-stock-images-download-graphic-design-images-from-our-creative-store-removebg-preview-11 {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    width: 466px;
+    height: 454px;
+    box-sizing: border-box;
+  }
+  .frame-1 .vision {
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFFFF;
+  }
+  .frame-1 .contact {
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFFFF;
+  }
+  .frame-1 .benefits {
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFFFF;
+  }
+  .frame-1 .reviews {
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFFFF;
+  }
+  .frame-1 .resume-parser {
+    margin-right: 25px;
+    width: 478.9px;
+    overflow-wrap: break-word;
+    font-family: 'Kapakana';
+    font-weight: 400;
+    font-size: 50px;
+    color: #FFFFFF;
+  }
+  .frame-1 .container {
+    margin: 41px auto 83px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+  .frame-1 .benefits-of-using-this-tool {
+    margin: 0 0 15px 24px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 700;
+    font-size: 65px;
+    color: #FFFFFF;
+  }
+  .frame-1 .line-1 {
+    background: #FFFFFF;
+    margin-bottom: 0px;
+    width: 573px;
+    height: 10px;
+  }
+  .frame-1 .time-efficiency {
+    margin: 0 22.9px 18px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 400;
+    font-size: 30px;
+    color: #EEEEEE;
+  }
+  .frame-1 .container-1 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+  }
+  .frame-1 {
+    background: linear-gradient(180deg, #3E1F47, #144552);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100vw;
+    /* box-sizing: border-box; */
+    overflow-x: hidden;
+    padding: 0 16px;
+}
+  .frame-1 .start-here {
+    margin-right: 17.5px;
+    width: 154.5px;
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 700;
+    font-size: 30px;
+    color: #4D194D;
+  }
+  .frame-1 .arrow-1 {
+    background: #4D194D;
+    margin: 22px 0 11px 0;
+    width: 67px;
+    height: 2px;
+  }
+  .frame-1 .group-2 {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 28px;
+    border: 1px solid #FFFBFB;
+    background: #FAFBFC;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-start;
+    padding: 12px 22px 21px 26px;
+    width: 287px;
+    box-sizing: border-box;
+  }
+
+  .frame-1 .container-2 {
+    margin: 44px auto 90px;
+    display: flex;
+    box-sizing: border-box;
+}
+  .frame-1 .line-2 {
+    background: #FFFFFF;
+    transform: rotate(3.296deg);
+    position: absolute;
+    left: 64px;
+    top: 55.8px;
+    width: 55.4px;
+    height: 5px;
+  }
+  .frame-1 .line-3 {
+    background: #FFFFFF;
+    transform: rotate(2.701deg);
+    margin-bottom: 15.7px;
+    align-self: flex-start;
+    width: 33.8px;
+    height: 5px;
+  }
+  .frame-1 .line-4 {
+    background: #FFFFFF;
+    transform: rotate(2.759deg);
+    margin: 0 17.3px;
+    align-self: flex-start;
+    width: 16.5px;
+    height: 5px;
+  }
+  .frame-1 .professional-appearance {
+    margin: 0 0 19px 8.2px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 400;
+    font-size: 30px;
+    color: #3E1F47;
+  }
+  .frame-1 .user-friendly-interface {
+    position: relative;
+    margin: 0 0 11px 7.4px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 400;
+    font-size: 30px;
+    color: #EEEEEE;
+  }
+  .frame-1 .container-3 {
+    background: linear-gradient(180deg, #FFFFFF, #3E1F47);
+    position: relative;
+    margin-right: 64.6px;
+    display: flex;
+    padding: 178px 0 90px 9.4px;
+    width: 436px;
+    box-sizing: border-box;
+  }
+  .frame-1 .notas-icono-violeta-removebg-preview-1 {
+    background: url('assets/images/NotasIconoVioletaRemovebgPreview1.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 98px;
+    top: 38px;
+    width: 149px;
+    height: 172px;
+  }
+  .frame-1 .contactos-icono-violeta-removebg-preview-1 {
+    background: url('assets/images/ContactosIconoVioletaRemovebgPreview1.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 44px;
+    right: 73px;
+    width: 176px;
+    height: 160px;
+  }
+  .frame-1 .download-2-removebg-preview-1 {
+    background: url('assets/images/Download2RemovebgPreview1.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 44px;
+    right: 110px;
+    width: 257px;
+    height: 166px;
+  }
+  .frame-1 .resume-builders-streamline-document-creation-saving-users-time-through-templates-and-formatting-automation {
+    text-align: center;
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 400;
+    font-size: 20px;
+    color: #EEEEEE;
+  }
+  .frame-1 .resume-builders-enhance-presentations-with-professionally-designed-templates-and-formatting-choices-for-apolished-look {
+    margin-right: 10.4px;
+    text-align: center;
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 700;
+    font-size: 20px;
+    color: #3E1F47;
+  }
+  .frame-1 .resume-builders-simplify-professional-resume-creation-with-an-intuitive-user-friendly-platform-catering-to-users-without-advanced-design-skills {
+    margin-right: 18.4px;
+    text-align: center;
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 400;
+    font-size: 20px;
+    color: #EEEEEE;
+  }
+  .frame-1 .line-5 {
+    background: #874D98;
+    margin-top: 0px;
+    width: 146px;
+    height: 10px;
+  }
+  .frame-1 .container-4 {
+    background: linear-gradient(180deg, #874D98, #0F0113);
+    position: relative;
+    margin: 0 0 145px 0;
+    display: flex;
+    padding: 0 82.2px 0 57px;
+    box-sizing: border-box;
+    max-width: fit-content;
+    width: 100%;
+  }
+  .frame-1 .get-in-touch-with-us {
+    margin: 0 0 40px 516px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 400;
+    font-size: 40px;
+    color: #EEEEEE;
+  }
+  .frame-1 .line-7 {
+    background: #FFFFFF;
+    margin: 0 0 11px 295px;
+    width: 109px;
+    height: 10px;
+  }
+  .frame-1 .supportresumeparser-com {
+    margin: 0 0 34px 590px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 400;
+    font-size: 35px;
+    color: #EEEEEE;
+  }
+  .frame-1 .privacy-policy {
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFCFC;
+  }
+  .frame-1 .terms-of-use {
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFCFC;
+  }
+  .frame-1 .icon-removebg-preview-1 {
+    background: url('assets/images/IconRemovebgPreview1.png') 50% / cover no-repeat;
+    position: absolute;
+    left: -39px;
+    bottom: 83px;
+    width: 572px;
+    height: 530px;
+  }
+  .frame-1 .download-premium-png-of-png-direct-message-icon-for-social-media-app-paper-plane-illustration-by-ning-about-neon-icons-neon-neon-png-plane-and-icon-png-2873764-removebg-preview-1 {
+    border-radius: 250px;
+    background: url('assets/images/DownloadPremiumPngOfPngDirectMessageIconForSocialMediaAppPaperPlaneIllustrationByNingAboutNeonIconsNeonNeonPngPlaneAndIconPng2873764RemovebgPreview1.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 340px;
+    bottom: 152px;
+    width: 385px;
+    height: 384px;
+    transform: scaleX(-1);
+}
+  .frame-1 .group-12 {
+    border-radius: 20px;
+    border: 3px solid #FFFFFF;
+    background: #D9D9D9;
+    position: relative;
+    margin-right: 33.3px;
+    display: flex;
+    padding: 8.3px 0.9px 15.8px 0;
+    width: 205.7px;
+    box-sizing: border-box;
+  }
+  .frame-1 .group-13 {
+    border-radius: 20px;
+    border: 3px solid #FFFFFF;
+    background: #D9D9D9;
+    position: relative;
+    display: flex;
+    padding: 8.3px 6px 15.8px 0;
+    width: 205.7px;
+    box-sizing: border-box;
+  }
+  .frame-1 .about-us-1 {
+    margin: 0 29px 66px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 700;
+    font-size: 65px;
+    color: #FFFFFF;
+  }
+  .frame-1 .our-tool-resume-parser-is-an-artificial-intelligence-tool-which-is-used-for-extracting-data-from-resumes-of-different-people-without-consuming-extra-time-our-time-and-effort-is-less-it-is-also-used-as-resume-builder-in-which-applicants-can-choose-their-own-template-and-by-just-giving-their-required-personal-information-they-can-build-their-own-resume-without-any-effort-and-can-be-done-in-short-time {
+    text-align: center;
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 400;
+    font-size: 25px;
+    color: #EEEEEE;
+  }
+  .frame-1 .container-5 {
+    margin: 100px 0 99px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .frame-1 .container-6 {
+    background: linear-gradient(180deg, #74148F, #B58AC1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 95px 104.3px 277.9px 104.3px;
+    width: 100%;
+    max-width: fit-content;
+    box-sizing: border-box;
+  }
+  .frame-1 .container-7 {
+    margin: 4px 0 23px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 569.9px;
+    height: fit-content;
+    box-sizing: border-box;
+  }
+  .frame-1 .container-8 {
+    position: relative;
+    margin: 0 112px 182px 112px;
+    display: flex;
+    align-self: flex-start;
+    box-sizing: border-box;
+  }
+  .frame-1 .our-mission {
+    margin-bottom: 50px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 700;
+    font-size: 65px;
+    color: #FFFFFF;
+  }
+  .frame-1 .empowering-individuals-to-craft-compelling-resumes-effortlessly-and-aiding-recruiters-in-efficiently-extracting-vital-candidate-information {
+    text-align: center;
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 400;
+    font-size: 25px;
+    color: #EEEEEE;
+  }
+  .frame-1 .free-vector-conference-concept-illustration-removebg-preview-1 {
+    background: url('assets/images/FreeVectorConferenceConceptIllustrationRemovebgPreview1.png') 50% / cover no-repeat;
+    margin-top: 22px;
+    width: 439px;
+    height: 398px;
+  }
+  .frame-1 .goals-concept-vector-image-on-vector-stock-removebg-preview-1 {
+    background: url('assets/images/GoalsConceptVectorImageOnVectorStockRemovebgPreview1.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+  }
+  .frame-1 .ellipse-1 {
+    position: relative;
+    width: 140.2px;
+    height: 138.3px;
+  }
+  .frame-1 .group-16 {
+    position: relative;
+    margin-right: 5px;
+    display: flex;
+    padding: 124px 0 149.7px 26.4px;
+    width: 498px;
+    height: 412px;
+    box-sizing: border-box;
+  }
+  .frame-1 .our-vision {
+    margin-bottom: 50px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 700;
+    font-size: 65px;
+    color: #FFFFFF;
+  }
+  .frame-1 .transforming-the-job-application-process-by-providing-innovative-resume-solutions-that-optimize-efficiency-and-effectiveness-for-both-applicants-and-recruiters {
+    text-align: center;
+    overflow-wrap: break-word;
+    font-family: 'Judson';
+    font-weight: 400;
+    font-size: 25px;
+    color: #EEEEEE;
+  }
+  .frame-1 .kanban-cheat-sheet-everything-for-your-team-removebg-preview-1 {
+    background: url('assets/images/KanbanCheatSheetEverythingForYourTeamRemovebgPreview1.png') 50% / cover no-repeat;
+    width: 490px;
+    height: 337px;
+  }
+  .frame-1 .container-9 {
+    background: url('assets/images/AlarmIconRemovebgPreview1.png') 50% / cover no-repeat;
+    position: relative;
+    margin: 0 0 1px 51.6px;
+    display: flex;
+    flex-direction: column;
+    padding: 77.4px 0 30.9px 0;
+    width: 155.4px;
+    box-sizing: border-box;
+  }
+  .frame-1 .container-10 {
+    margin: 0 99px 3px 84px;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  .frame-1 .container-11 {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    width: 444.7px;
+    box-sizing: border-box;
+  }
+  .frame-1 .container-12 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: fit-content;
+    height: fit-content;
+    box-sizing: border-box;
+  }
+  .frame-1 .container-13 {
+    margin: 0 57.8px 46px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .frame-1 .container-14 {
+    margin: 178px 0 75px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .frame-1 .container-15 {
+    margin: 0 72px 63px 111.8px;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  .frame-1 .container-16 {
+    margin: 0 33px 85px 33px;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  .frame-1 .container-17 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .frame-1 .container-18 {
+    background: #3E1F47;
+    position: relative;
+    margin: 0 37px 117px 19px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 24px 87.2px 19px 67px;
+    width: 100%;
+    max-width: fit-content;
+    box-sizing: border-box;
+  }
+  .frame-1 .container-19 {
+    margin: 247px 124.5px 28px 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  .frame-1 .container-20 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+  }
+  .frame-1 .container-21 {
+    margin: 0 0 77px 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 758px;
+    box-sizing: border-box;
+  }
+  .frame-1 .container-22 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  

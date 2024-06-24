@@ -1,0 +1,11 @@
+.text-center {
+    text-align: center;
+    font-size: 'Judson';
+    transition: all 0.3s ease-in-out;  /* Adjust duration and timing function as needed */
+  }
+  
+  .text-center:hover {
+    /* Customize hover effects as desired */
+    cursor: pointer;  /* Maintain pointer cursor for interactivity */
+    transform: scale(1.1); /* Slightly scale up for emphasis (optional) */
+  }
