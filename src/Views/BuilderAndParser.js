@@ -163,9 +163,10 @@
 
 import React from 'react';
 import image1 from '../Styles/external/Flat_Web_Design.png';
-import image2 from '../Styles/external/Financial_data_Customizable_Cartoon_Illustrations___Bro_Style-removebg-preview 1.png'
-import image3 from '../Styles/external/download-removebg-preview 1.png'
+import image2 from '../Styles/external/Financial_data_Customizable_Cartoon_Illustrations___Bro_Style-removebg-preview 1.png';
+import image3 from '../Styles/external/download-removebg-preview 1.png';
 import { Link } from 'react-router-dom';
+import { ReactComponent as DiamondIcon } from '../Assets/diamond-svgrepo-com.svg'; // Replace './diamond.svg' with your actual SVG file path
 
 export default function BuilderAndParser() {
   return (
@@ -304,37 +305,53 @@ export default function BuilderAndParser() {
               justifyContent: 'center',
               gap: '1rem',
               marginBottom: '3rem',
+              position: 'relative', // Ensure the relative positioning for absolute positioning of the icon
             }}
           >
-            <Link to="/login">
-            <button
+            {/* Diamond Icon */}
+            <DiamondIcon
               style={{
-                border: '1px solid white',
-                color: 'white',
-                padding: '0.5rem 1rem',
-                borderRadius: '999px',
-                backgroundColor: 'transparent',
-                cursor: 'pointer',
-                transition: 'background-color 0.3s, color 0.3s',
+                position: 'absolute',
+                left: '30rem', // Adjust as per your design
+                top: '50%',
+                transform: 'translateY(-50%)',
+                width: '1rem',
+                fill: 'white', // Adjust color as needed
               }}
-            >
-              Resume Parser
-            </button>
+            />
+            {/* Resume Parser Button */}
+            <Link to="/parser">
+              <button
+                style={{
+                  border: '1px solid white',
+                  color: 'white',
+                  padding: '0.5rem 1rem',
+                  borderRadius: '999px',
+                  backgroundColor: 'transparent',
+                  cursor: 'pointer',
+                  transition: 'background-color 0.3s, color 0.3s',
+                  paddingLeft: '2.5rem', // Ensure space for the icon
+                }}
+              >
+                Resume Parser
+              </button>
             </Link>
-            <Link to="/login">
-            <button
-              style={{
-                border: '1px solid white',
-                color: 'white',
-                padding: '0.5rem 1rem',
-                borderRadius: '999px',
-                backgroundColor: 'transparent',
-                cursor: 'pointer',
-                transition: 'background-color 0.3s, color 0.3s',
-              }}
-            >
-              Resume Builder
-            </button>
+            {/* Resume Builder Button */}
+            <Link to="/home">
+              <button
+                style={{
+                  border: '1px solid white',
+                  color: 'white',
+                  padding: '0.5rem 1rem',
+                  borderRadius: '999px',
+                  backgroundColor: 'transparent',
+                  cursor: 'pointer',
+                  transition: 'background-color 0.3s, color 0.3s',
+                  paddingLeft: '2.5rem', // Ensure space for the icon
+                }}
+              >
+                Resume Builder
+              </button>
             </Link>
           </div>
           <img

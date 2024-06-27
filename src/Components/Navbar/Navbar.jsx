@@ -25,7 +25,7 @@ export default function Navbar() {
     >
       <Box id="navbar" px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <ReachLink to="/home">
+          <ReachLink to="/page2">
             <Box>
               <img
                 style={{ height: '44px' }}
@@ -51,16 +51,6 @@ export default function Navbar() {
                 style={{ color: 'white' }}
               >
                 Home{' '}
-              </ReachLink>
-              <ReachLink
-                px={2}
-                py={1}
-                rounded={'md'}
-                _hover={{ textDecoration: 'none', bg: 'gray.200' }}
-                to={'/parser'}
-                style={{ color: 'white' }}
-              >
-                Parser{' '}
               </ReachLink>
               <ReachLink
                 px={2}

@@ -96,7 +96,7 @@ export default function LandingWidget() {
             >
               The ideal framework to learn how to parse and build resumes
             </p>
-            <Link to="/page2">
+            <Link to="/login">
               <button
                 style={{
                   backgroundColor: 'white',

@@ -73,7 +73,7 @@ export default function Signin() {
       });
 
       if (res.data === 'exist') {
-        history('/home', { state: { id: email } });
+        history('/page2', { state: { id: email } });
       } else if (res.data === 'notexist') {
         alert('User has not signed up');
       } else {
