@@ -65,14 +65,12 @@ export default function Signin() {
 
   async function submit(e) {
     e.preventDefault();
-    alert('submit');
     try {
-      const res = await axios.post('http://localhost:8000/', {
+      const res = await axios.post('http://localhost:8000/login', {
         email,
         password,
       });
-      
-      alert(res.data);
+
 
       if (res.data === 'exist') {
         history('/page2', { state: { id: email } });
