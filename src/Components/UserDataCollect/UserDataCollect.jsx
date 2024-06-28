@@ -47,7 +47,7 @@ const UserDataCollect = () => {
         ++i;
         const template = (
             <>
-                <FormControl isRequired className='my-2'>
+                <FormControl isRequired className='my-2' >
                     <Input disabled={checkProj} id={`pTitle${i}`} name='pName' onChange={handleChangeProject} type={'text'} placeholder='Enter Project Title' />
                 </FormControl>
                 <FormControl isRequired className='my-2'>
@@ -138,7 +138,7 @@ const UserDataCollect = () => {
             <div id="form-collect">
                 {/* Personal Details Area  */}
                 <div id="form-personal" className='mb-2'>
-                    <Heading as='h4' size='md' className='mb-2'>
+                    <Heading as='h4' size='md' className='mb-2' style={{ color: 'white'}}>
                         Personal Details
                     </Heading>
                     <hr />
@@ -153,41 +153,41 @@ const UserDataCollect = () => {
                             <img className="blah" src={personalData.profileImage} alt="your profile preview" />
                         </div>
                     </FormControl>
-                    <FormControl isRequired className='my-2'>
+                    <FormControl isRequired className='my-2' style={{ color: 'white'}}>
                         <Input name='name' onChange={handleChangePersonal} type={'text'} placeholder='Your Name' />
                     </FormControl>
-                    <FormControl isRequired className='my-2'>
+                    <FormControl isRequired className='my-2' style={{ color: 'white'}}>
                         <Input name='summary' onChange={handleChangePersonal} type={'text'} placeholder='Your Summary' />
                     </FormControl>
-                    <FormControl isRequired className='my-2'>
+                    <FormControl isRequired className='my-2' style={{ color: 'white'}}>
                         <Input name='profile' onChange={handleChangePersonal} type={'text'} placeholder='Work Profile' />
                     </FormControl>
-                    <FormControl isRequired className='my-2'>
+                    <FormControl isRequired className='my-2' style={{ color: 'white'}}>
                         <Input name='address' onChange={handleChangePersonal} type={'text'} placeholder='Address' />
                     </FormControl>
-                    <FormControl isRequired className='my-2'>
+                    <FormControl isRequired className='my-2' style={{ color: 'white'}}>
                         <Input name='phone' onChange={handleChangePersonal} type={'tel'} placeholder='Phone number' />
                     </FormControl>
-                    <FormControl isRequired className='my-2'>
+                    <FormControl isRequired className='my-2' style={{ color: 'white'}}>
                         <Input name='email' onChange={handleChangePersonal} type={'email'} placeholder='Email id' />
                     </FormControl>
                 </div>
 
                 {/* Skills Area  */}
                 <div id="form-personal" className='mb-2'>
-                    <Heading as='h4' size='md' className='my-2'>
+                    <Heading as='h4' size='md' className='my-2' style={{ color: 'white'}}>
                         Technical Skills
                     </Heading>
                     <hr />
 
-                    <FormControl isRequired className='my-2'>
+                    <FormControl isRequired className='my-2' style={{ color: 'white'}}>
                         <Input name='skill' onChange={handleChangePersonal} type={'text'} placeholder='Separate skills by comma' />
                     </FormControl>
                 </div>
 
                 {/* Education Area  */}
                 <div id="form-personal" className='mb-2'>
-                    <Heading as='h4' size='md' className='my-2'>
+                    <Heading as='h4' size='md' className='my-2' style={{ color: 'white'}}>
                         Education
                     </Heading>
                     <hr />
@@ -200,7 +200,7 @@ const UserDataCollect = () => {
                 {/* Projects Area  */}
                 <div id="form-personal" className='mb-2'>
                     <div className='d-flex align-items-center justify-content-between'>
-                        <Heading as='h4' size='md' className='my-2'>
+                        <Heading as='h4' size='md' className='my-2' style={{ color: 'white'}}>
                             Projects
                         </Heading>
                         <Switch defaultChecked={true} onChange={() => (setCheckProj(!checkProj))} colorScheme='teal' />
@@ -215,7 +215,7 @@ const UserDataCollect = () => {
                 {/* Work Experience Area  */}
                 <div id="form-personal" className='mb-2'>
                     <div className='d-flex align-items-center justify-content-between'>
-                        <Heading as='h4' size='md' className='my-2'>
+                        <Heading as='h4' size='md' className='my-2' style={{ color: 'white'}}>
                             Work Experience
                         </Heading>
                         <Switch defaultChecked={true} onChange={() => (setCheckWork(!checkWork))} colorScheme='teal' />
@@ -230,13 +230,13 @@ const UserDataCollect = () => {
                 {/* Awards & Achievement  */}
                 <div id="form-personal" className='mb-2'>
                     <div className='d-flex align-items-center justify-content-between'>
-                        <Heading as='h4' size='md' className='my-2'>
+                        <Heading as='h4' size='md' className='my-2' style={{ color: 'white'}}>
                             Awards & Achievement
                         </Heading>
                         <Switch defaultChecked={true} onChange={() => (setCheckAward(!checkAward))} colorScheme='teal' />
                     </div>
                     <hr />
-                    <FormControl isRequired className='my-2'>
+                    <FormControl isRequired className='my-2' style={{ color: 'white'}}>
                         <Textarea name='awards' disabled={checkAward} onChange={handleChangeAwards} placeholder='Use comma to separate Achievement' />
                     </FormControl>
                 </div>

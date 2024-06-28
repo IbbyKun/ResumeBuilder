@@ -1,7 +1,7 @@
 import React from 'react';
-import logo1 from '../Resources/layout.png';
-import logo2 from '../Resources/editing.png';
-import logo3 from '../Resources/bookmark.png';
+import logo1 from '../Resources/logo3.jpg';
+import logo2 from '../Resources/logo2.jpg';
+import logo3 from '../Resources/logo1.jpg';
 
 const stepStyle = {
   display: 'flex',
@@ -32,7 +32,7 @@ const regularText = {
 export default function Steps() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px' }}>
-      <div style={{ fontSize: '32px', fontWeight: 'bold', color: 'black', marginBottom: '20px', textAlign: 'center' }}>Steps</div>
+      <div style={{ fontSize: '32px', fontWeight: 'bold', color: 'white', marginBottom: '20px', textAlign: 'center' }}>Steps</div>
       <br></br>
       <br></br>
       <div style={{ display: 'flex', justifyContent: 'center' }}>

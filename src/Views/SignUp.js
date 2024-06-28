@@ -57,15 +57,10 @@ export default function SignUp() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
 
   async function submit(e) {
     e.preventDefault();
 
-    if (password.trim() !== confirmPassword.trim()) {
-      alert('Password and confirm password do not match');
-      return;
-    }
 
     try {
       const response = await axios.post('http://localhost:8000/signup', {

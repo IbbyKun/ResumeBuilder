@@ -17,7 +17,7 @@ function Login() {
         password,
       });
 
-      if (res.data === 'exist') {
+      if (res.data == 'exist') {
         history('/home', { state: { id: email } });
       } else if (res.data === 'notexist') {
         alert('User has not signed up');

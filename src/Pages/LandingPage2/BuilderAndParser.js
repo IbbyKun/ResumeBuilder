@@ -139,19 +139,7 @@ export default function BuilderAndParser() {
               marginBottom: '3rem',
             }}
           >
-            <button
-              style={{
-                border: '1px solid white',
-                color: 'white',
-                padding: '0.5rem 1rem',
-                borderRadius: '999px',
-                backgroundColor: 'transparent',
-                cursor: 'pointer',
-                transition: 'background-color 0.3s, color 0.3s',
-              }}
-            >
-              Resume Parser
-            </button>
+            
             <button
               style={{
                 border: '1px solid white',
@@ -164,6 +152,19 @@ export default function BuilderAndParser() {
               }}
             >
               Resume Builder
+            </button>
+            <button
+              style={{
+                border: '1px solid white',
+                color: 'white',
+                padding: '0.5rem 1rem',
+                borderRadius: '999px',
+                backgroundColor: 'transparent',
+                cursor: 'pointer',
+                transition: 'background-color 0.3s, color 0.3s',
+              }}
+            >
+              Resume Parser
             </button>
           </div>
           <img

@@ -8,23 +8,20 @@ function Signup() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
 
   async function submit(e) {
     e.preventDefault();
 
-    if (password.trim() !== confirmPassword.trim()) {
-      alert('Password and confirm password do not match');
-      return;
-    }
-
+   
+    alert("Submit");
     try {
+      
       const response = await axios.post('http://localhost:8000/signup', { // Changed port to 8000
         name,
         email,
         password,
       });
-
+      alert(response.data);
       if (response.data === 'exist') {
         alert('User already exists');
       } else if (response.data === 'notexist') {

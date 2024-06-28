@@ -54,7 +54,7 @@ const Footer = () => {
         </ul>
       </div>
       <div>
-        <p>© {new Date().getFullYear()} Company Name. All Rights Reserved.</p>
+        <p>© {new Date().getFullYear()} Company Name.</p>
         <p style={smallTextStyle}>Privacy Policy | Terms of Service</p>
       </div>
     </div>
