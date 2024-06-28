@@ -58,7 +58,6 @@ function App() {
             path="/home"
             element={
               <>
-                <Navbar />
                 <Home />
                 <Footer />
               </>

@@ -88,11 +88,12 @@ export default function Introduction() {
                                 textAlign={{ base: 'center', md: 'start' }}
                                 fontWeight={600}
                                 fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
-                                lineHeight={'110%'}>
+                                lineHeight={'110%'}
+                                color={'white'}>
                                 Select a {' '}
-                                <Text as={'span'} color={'#38B2AC'}>
+                                <Text as={'span'} color={'white'}>
                                     Template {' '}
-                                </Text>
+                                </Text >
                                 from the list
                             </Heading>
                     }

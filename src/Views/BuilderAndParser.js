@@ -212,7 +212,7 @@ export default function BuilderAndParser() {
                   Home
                 </a>
                 <a
-                  href="/"
+                  href="/home"
                   style={{
                     color: 'white',
                     textDecoration: 'none',
@@ -222,7 +222,7 @@ export default function BuilderAndParser() {
                   Resume Builder
                 </a>
                 <a
-                  href="/"
+                  href="/parser"
                   style={{
                     color: 'white',
                     textDecoration: 'none',
