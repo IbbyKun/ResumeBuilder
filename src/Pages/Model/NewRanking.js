@@ -1,3 +1,4 @@
+import { Center } from '@chakra-ui/react';
 import React, { useState } from 'react';
 
 const PdfJobMatcher = () => {
@@ -54,20 +55,20 @@ const PdfJobMatcher = () => {
       <tr key={index} >
         <td>{item[0]}</td>
         <td style={styles.tableRow}>{item[1]}</td>
-        <td>{item[2]}</td>
+        <td >{item[2]}</td>
       </tr>
     ));
   
     return (
-      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+      <table style={{ width: '100%', borderCollapse: 'collapse' ,tableLayout: 'fixed'}}>
         <thead>
           <tr>
-            <th style={styles.tableHeader}>Field 1</th>
-            <th style={styles.tableHeader}>Field 2</th>
-            <th style={styles.tableHeader}>Field 3</th>
+            <th style={styles.tableHeaderID}>ID</th>
+            <th style={styles.tableHeader}>Resume</th>
+            <th style={styles.tableHeaderScore}>Similarity Score</th>
           </tr>
         </thead>
-        <tbody>{rows}</tbody>
+        <tbody >{rows}</tbody>
       </table>
     );
   };
@@ -189,16 +190,39 @@ const styles = {
     borderRadius: '4px',
     backgroundColor: '#fff',
   },
-  tableHeader: {
+  
+  tableHeaderID: {
     borderBottom: '1px solid #ddd',
     padding: '10px',
-    textAlign: 'left',
+    textAlign: 'right',
     backgroundColor: '#f2f2f2',
   },
+  tableHeader: {
+    borderBottom: '10px solid #ddd',
+    padding: '10px',
+    textAlign: 'Center',
+    backgroundColor: '#f2f2f2',
+    width:'70%',
+    boxSizing: 'border-box',
+  },
+  tableHeaderScore: {
+    borderBottom: '1px solid #ddd',
+    padding: '10px',
+    textAlign: 'Center',
+    backgroundColor: '#f2f2f2',
+    width: '24%',
+  },
+
   tableRow: {
     maxHeight: '100px',
+    maxWidth: '100%',
     overflowY: 'auto',
     display: 'block',
+  },
+  tableRowScore: {
+    maxHeight: '100px',
+    maxWidth: '100px',
+    overflowY: 'auto',
   },
 };
 

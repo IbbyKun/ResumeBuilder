@@ -47,7 +47,7 @@ const PdfDirectoryCategory = () => {
             <label style={styles.label}>Category Counts:</label>
             <div id="category" style={styles.category}>
               {Object.keys(categoryCounts).length === 0 ? (
-                <span>Processing...</span>
+                <span>Waiting to upload</span>
               ) : (
                 <ul>
                   {Object.entries(categoryCounts).map(([category, count]) => (

@@ -70,7 +70,7 @@ const PDFUpload = () => {
             fontSize: '2rem',
             marginBottom: '1rem',
             textAlign: 'center',
-            color: '#000', // Text color black
+            color: 'black', // Text color black
           }}
         >
           Upload Resume PDF
@@ -89,6 +89,7 @@ const PDFUpload = () => {
             borderRadius: '4px',
             backgroundColor: '#fff',
             boxSizing: 'border-box',
+            color: 'black',
             marginBottom: '6px',
           }}
         />
